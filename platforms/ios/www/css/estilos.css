@@ -1,0 +1,106 @@
+body{
+    background-color:black;
+}
+
+#p_visitas{
+    display: none;
+}
+#p_galeria{
+    display: none;
+}
+
+#p_botones{
+    display: none;
+}
+
+#l_user{
+    color:green;
+    font-size: 20px;
+}
+
+.input-group-addon{
+    background-color: green;
+    border:1px solid green;
+}
+
+.input_v{
+    border:1px solid green;
+}
+
+.fa{
+    color:white;
+}
+
+button{
+    background-color: green;
+}
+
+
+@media screen and (max-width: 1030px) {
+    #p_login{
+        margin-top: 10%;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    #p_login{
+        margin-top:30%;
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    #p_login{
+        margin-left: 20%;
+        margin-right: 20%;
+        margin-top: 8%;
+    }
+
+    #div_logo{
+        height:60px;
+    }
+
+    #div_filtro{
+        background-color:black;
+        padding:10px;
+        margin-left:5%;
+        margin-right: 5%;
+    }
+    
+    #div_lista{
+        min-height: 200px;
+        max-height: 200px;
+        overflow-y: auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #p_login{
+        margin-top: 70%;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    #div_logo{
+        height:120px;
+    }
+
+    #div_filtro{
+        background-color:black;
+        padding:10px;
+        margin-left:5%;
+        margin-right: 5%;
+    }
+    
+    #div_lista{
+        min-height: 470px;
+        max-height: 470px;
+        overflow-y: auto;
+    }
+
+    #p_botones{
+        margin-top: 40%;
+        text-align: center;
+    }
+}
