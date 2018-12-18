@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <!--<link rel="stylesheet" type="text/css" href="css/index.css">-->
+
+        <!-- Hojas de estilo -->
+        <link rel="stylesheet" href="css/css/bootstrap.css" type="text/css" media="all">
+        <link href="font_awesome/font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/estilos.css" type="text/css" media="all">
+
+        <title>Hello World</title>
+    </head>
+    <body>
+
+            <div id="p_login">
+                    <div class="content">
+                        <div class="container">
+                            <div class="row">
+                                <div class="input-group col-xs-12 offset-md-4 col-md-4">
+                                    <span class="input-group-addon">
+                                        <i class="fa fa-user-o" aria-hidden="true"></i>
+                                    </span>
+                                    <input type="text" class="form-control input-sm input_v" id="i_usuario" placeholder="Usuario">
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="row">
+                                <div class="input-group col-xs-12 offset-md-4 col-md-4">
+                                    <span class="input-group-addon">
+                                        <i class="fa fa-key" aria-hidden="true"></i>
+                                    </span>
+                                    <input type="password" class="form-control input-md input_v" id="i_password" placeholder="Contraseña">
+                                </div>
+                            </div>
+                            <br/><br/>
+                            <div class="row">
+                                <div class="col-xs-12 offset-md-4 col-md-4" style="text-align: center;">
+                                    <button class="btn btn-lg btn-success" type="button" id="b_login">Login</button><br><br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <div id="p_visitas">
+                    <div class="content">
+                        <div class="container">
+                            <div id="div_logo"></div>
+                            <div class="row">
+                                <div class="input-group col-md-12">
+                                    <span class="input-group-addon">
+                                        <i class="fa fa-search" aria-hidden="true"></i>
+                                    </span>
+                                    <input type="text" class="form-control input-sm" id="i_filtro" placeholder="Filtrar">
+                                </div>
+                            </div>
+        
+                            <div class="row">
+                                <div id="div_lista" class="col-md-12">
+                                    <ul id="lista" class="list-group">
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <div id="p_botones">
+                    <button class="btn btn-lg btn-success" type="button" id="b_foto">FOTO</button>
+                    <br><br>
+                    <div id="div_foto"></div>
+                    <div id="coordenadas" style="color:white;"></div>
+                    <br>
+                    <textarea id="ta_descripcion" type="text" class="form-control" placeholder="Descripción" rows="3"></textarea>
+                    <br>
+                    <button class="btn btn-lg btn-success" type="button" id="b_guardar">Guardar</button>
+                </div>
+        
+                <div id="p_galeria">
+                </div>
+
+                <script type="text/javascript">
+                    document.addEventListener("deviceready", onDeviceReady, false);
+        
+                    function onDeviceReady(){
+                        alert('onDeviceReady');
+                    }
+                </script>
+
+        <!--<div class="app">
+            <h1>Apache Cordova</h1>
+            <div id="deviceready" class="blink">
+                <p class="event listening">Connecting to Device</p>
+                <p class="event received">Device is Ready</p>
+            </div>
+        </div>-->
+        <script type="text/javascript" src="cordova.js"></script>
+        <!--<script type="text/javascript" src="js/index.js"></script>-->
+
+        <script src="js/jquery3.3.1/jquery-3.3.1.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/js/bootstrap.js"></script>
+        <script src="js/logica.js"></script>
+    </body>
+</html>
