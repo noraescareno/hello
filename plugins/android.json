@@ -18,6 +18,9 @@
     },
     "cordova-plugin-geolocation": {
       "PACKAGE_NAME": "com.denken.hello"
+    },
+    "cordova-plugin-file-transfer": {
+      "PACKAGE_NAME": "com.denken.hello"
     }
   },
   "dependent_plugins": {}
